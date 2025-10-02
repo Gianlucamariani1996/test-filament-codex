@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
 
 class ProductResource extends Resource
 {
@@ -44,7 +45,7 @@ class ProductResource extends Resource
                 TextColumn::make('name')
                     ->searchable()
                     ->sortable(),
-                ImageColumn::make('images')
+                SpatieMediaLibraryImageColumn::make('images')
                     ->collection('images')
                     ->square(),
             ])
